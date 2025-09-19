@@ -6,8 +6,8 @@ export let channelData: Float32Array<ArrayBuffer> | null = null;
 export let singleAnalyser: SingleAnalyser | null = null;
 export let octoveAnalyzer: MultiAnalyser | null = null;
 
-export let playStartTime = 0;
-
+let playStartTime = 0;
+export function getPlayTime() { return performance.now() - playStartTime; }
 
 document.getElementById("file")?.addEventListener("change", async (e) => {
     const input = e.target as HTMLInputElement;

@@ -1,5 +1,5 @@
 import type p5_ from "p5"; // インスタンスの型名はp5だと↓と被るのでズラす
-import { audioBuffer, octoveAnalyzer, playStartTime, singleAnalyser } from "./load_sound";
+import { audioBuffer, getPlayTime, octoveAnalyzer, singleAnalyser } from "./load_sound";
 import { drawSpectrumGrayscale, drawTonalGrayscale, drawTransition } from "./render";
 declare const p5: typeof p5_; // 外部で値としてのp5が実装されていることを宣言
 
@@ -18,9 +18,9 @@ const sketch = (p5: p5_) => {
     if (!audioBuffer || !singleAnalyser || !octoveAnalyzer) return;
 
     //const result = singleAnalyzer.analyseAt(performance.now() - playStartTime, 8192);
-    const result = octoveAnalyzer.analyseAt(performance.now() - playStartTime, 256);
+    const result = octoveAnalyzer.analyseAt(getPlayTime(), 256);
 
-    const result2 = octoveAnalyzer.analyseAt(performance.now() - playStartTime + 250, 256);
+    const result2 = octoveAnalyzer.analyseAt(getPlayTime() + 250, 256);
 
     p5.background(0);
     drawTransition(p5, result, result2);
