@@ -1,5 +1,5 @@
 import type p5_ from "p5"; // インスタンスの型名はp5だと↓と被るのでズラす
-import { audioBuffer, getPlayTime, octoveAnalyzer, singleAnalyser } from "./load_sound";
+import { audioBuffer, getPlayTime, octoveAnalyzer, singleAnalyser } from "./loadSound";
 import { drawSpectrumGrayscale, drawTonalGrayscale, drawTransition } from "./render";
 declare const p5: typeof p5_; // 外部で値としてのp5が実装されていることを宣言
 
