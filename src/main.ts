@@ -15,6 +15,7 @@ const sketch = (p5: p5_) => {
     p5.frameRate(60);
   };
   p5.draw = () => {
+    // 音声がロードされ、準備されるるまで何もしない
     if (!audioBuffer || !singleAnalyser || !octoveAnalyzer) return;
 
     //const result = singleAnalyzer.analyseAt(performance.now() - playStartTime, 8192);
