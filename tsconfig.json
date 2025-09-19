@@ -10,7 +10,6 @@
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "noEmit": true,
-    /*"types": ["p5"]     /* p5 の型を自動で読みたいなら */
   },
   "include": ["src"]
 }

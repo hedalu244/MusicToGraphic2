@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "debug": "concurrently \"tsc -w --noEmit\" \"esbuild src/main.ts --bundle --outfile=public/main.js --sourcemap --watch --external:opencv.js\"",
-    "build": "esbuild src/main.ts --bundle --outfile=public/main.js --minify --external:opencv.js",
+    "debug": "concurrently \"tsc -w --noEmit\" \"esbuild src/main.ts --bundle --outfile=public/main.js --sourcemap --watch\"",
+    "build": "esbuild src/main.ts --bundle --outfile=public/main.js --minify",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
