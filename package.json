@@ -1,0 +1,23 @@
+{
+  "name": "hub_controller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "concurrently \"tsc -w --noEmit\" \"esbuild src/main.ts --bundle --outfile=public/main.js --sourcemap --watch --external:opencv.js\"",
+    "build": "esbuild src/main.ts --bundle --outfile=public/main.js --minify --external:opencv.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/p5": "^1.7.6",
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.25.9",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "opencv-ts": "^1.3.6"
+  }
+}
